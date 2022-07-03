@@ -1,7 +1,17 @@
-
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { Navigate, useLocation } from 'react-router-dom';
 //Create the HOC for protected Routes
 const ReqAuth = () => {
-  
+    const isAuth=useSelector(state=>state.AuthReducer.isAuth);
+    
+    const location = useLocation();
+
+    if(!isAuth){
+        return <Navigate to='/login' state={{from:location}} replace/>
+    }
+    
+  return children;
 };
 
 export default ReqAuth;

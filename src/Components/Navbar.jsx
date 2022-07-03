@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
@@ -13,8 +13,13 @@ const Navbar = () => {
       </div>
 
       <div>
+        <div>
+          {" "}
+          <Link to="/login">
+            <button data-cy="navbar-login-button">LOGIN</button>
+          </Link>
+        </div>
         {/* Link button to /login page, if the user is not authenticated, else don't show it*/}
-        <button data-cy="navbar-login-button">LOGIN</button>
       </div>
     </div>
   );

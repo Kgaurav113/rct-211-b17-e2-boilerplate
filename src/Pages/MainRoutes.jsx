@@ -7,7 +7,7 @@ import SingleShoe from "./SingleShoe";
 const MainRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Shoes />} />;
+      <Route path="/" element={<Shoes/>} />;
       <Route path="/login" element={<Login />} />
       <Route path="/shoes/:id" element={<SingleShoe />} />
       <Route path="*" element={<div>Page Not Found</div>} />
